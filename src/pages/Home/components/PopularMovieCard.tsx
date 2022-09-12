@@ -6,7 +6,7 @@ const PopularMovieCard = ({ movie }: { movie: Movie }) => {
   return (
     <>
       <Link to={`/details/${movie.id}`}>
-        <div className="bg-white shadow-sm rounded-md cursor-pointer">
+        <div className="bg-white shadow-sm rounded-md cursor-pointer h-full">
           <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             width={500}

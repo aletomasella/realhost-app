@@ -9,9 +9,10 @@ import {
 
 // FILL THE MOVIES ARRAY WITH THE DATA FROM THE API
 
-function* onLoadMoviesAsync(): any {
+function* onLoadMoviesAsync({ payload }: { payload: number }): any {
+  const pageNumber = payload;
   try {
-    const response = yield call(getPopularMovies);
+    const response = yield call(getPopularMovies, pageNumber);
     if (response.status === 200) {
       yield put(setMoviesList({ ...response.data }));
     }
@@ -21,7 +22,7 @@ function* onLoadMoviesAsync(): any {
 }
 
 function* onLoadMovies() {
-  yield takeLatest(getMoviesList.type, onLoadMoviesAsync);
+  yield takeLatest(getMoviesList.type as any, onLoadMoviesAsync);
 }
 
 // GET THE DETAILS FOR A SINGLE MOVIE
