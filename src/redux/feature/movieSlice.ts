@@ -17,9 +17,13 @@ const movieSlice = createSlice({
     getMoviesList(name) {
       return name;
     },
+    getMovie(id) {
+      return id;
+    },
   },
 });
 
-export const { setMoviesList, setMovie, getMoviesList } = movieSlice.actions;
+export const { setMoviesList, setMovie, getMoviesList, getMovie } =
+  movieSlice.actions;
 
 export default movieSlice.reducer;
