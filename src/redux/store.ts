@@ -7,7 +7,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: {
-    movie: MovieReducer,
+    movies: MovieReducer,
   },
   middleware: [sagaMiddleware],
 });
