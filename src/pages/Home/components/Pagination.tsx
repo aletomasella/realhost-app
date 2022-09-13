@@ -1,7 +1,7 @@
 import React from "react";
 
 const Pagination = ({ page, setPage }: any) => {
-  const [numberOfPages, setNumberOfPages] = React.useState(Array(10).fill(0));
+  const [numberOfPages, setNumberOfPages] = React.useState(Array(9).fill(0));
   return (
     <>
       <div className="flex items-center justify-between border-gray-200 bg-gray-700 px-4 py-3 sm:px-6 mx-auto w-full">
