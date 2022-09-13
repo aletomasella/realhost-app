@@ -15,7 +15,7 @@ const Details = () => {
 
   useEffect(() => {
     dispatch(getMovie(`${id}`));
-  }, []);
+  }, [id]);
   return (
     <>
       {movieDetails.title && (
